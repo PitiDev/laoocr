@@ -1,0 +1,29 @@
+name: laoocr
+description: A new Flutter package project.
+version: 0.0.1
+homepage:
+
+environment:
+  sdk: '>=2.18.4 <3.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_ml_kit: ^0.13.0
+  dotted_border: ^2.0.0+3
+  camera: ^0.10.0+4
+  path_provider: ^2.0.11
+  path: ^1.8.1
+  flutter_face_api: ^4.1.1
+  image: ^4.0.15
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+
+flutter:
+  assets:
+    - assets/images/
