@@ -27,7 +27,8 @@ class MaskOCRCam extends StatefulWidget {
       this.txtSubmit = 'Submit',
       this.txtSubmitOnFace = 'Done',
       this.btnSubmit,
-      this.btnSubmitOnFace})
+      this.btnSubmitOnFace,
+      this.showPopBack = false})
       : super(key: key);
 
   final String ocrType;
@@ -40,6 +41,7 @@ class MaskOCRCam extends StatefulWidget {
   Function? btnSubmitOnFace;
   String txtSubmit;
   String txtSubmitOnFace;
+  bool showPopBack;
 
   @override
   State<MaskOCRCam> createState() => _MaskOCRCamState();
@@ -76,7 +78,7 @@ class _MaskOCRCamState extends State<MaskOCRCam> {
             : _ocrType == "greenIdCard"
                 ? 300.0
                 : 300,
-        visiblePopButton: false,
+        visiblePopButton: widget.showPopBack,
         insideLine: MaskForCameraViewInsideLine(
           position: MaskForCameraViewInsideLinePosition.endPartThree,
           direction: MaskForCameraViewInsideLineDirection.horizontal,
@@ -962,7 +964,6 @@ class _MaskOCRCamState extends State<MaskOCRCam> {
                 //     }
                 //   }
                 // }
-
               }
               // result += "\n\n";
             });

@@ -19,7 +19,8 @@ class LaoOCRScan extends StatefulWidget {
       this.btnSubmit,
       this.btnSubmitOnFace,
       this.showSubmitBtn = false,
-      this.showFaceSubmitBtn = false})
+      this.showFaceSubmitBtn = false,
+      this.showPopBack = false})
       : super(key: key);
 
   String title;
@@ -34,6 +35,7 @@ class LaoOCRScan extends StatefulWidget {
   String txtSubmitOnFace;
   bool showSubmitBtn;
   bool showFaceSubmitBtn;
+  bool showPopBack;
 
   @override
   State<LaoOCRScan> createState() => _LaoOCRScanState();
@@ -44,6 +46,7 @@ class _LaoOCRScanState extends State<LaoOCRScan> {
 
   @override
   initState() {
+    WidgetsFlutterBinding.ensureInitialized();
     initPlatform();
     super.initState();
   }
@@ -119,10 +122,15 @@ class _LaoOCRScanState extends State<LaoOCRScan> {
                     ]),
                   )
                 : Container(),
-            ElevatedButton.icon(
-                onPressed: _onSubmit,
-                icon: Icon(Icons.navigate_next_outlined),
-                label: Text('Submit')),
+            Container(
+              padding: const EdgeInsets.only(left: 32, right: 32),
+              height: 50,
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                  onPressed: _onSubmit,
+                  icon: const Icon(Icons.navigate_next_outlined),
+                  label: Text(widget.txtSubmit)),
+            ),
           ],
         ),
       ),
@@ -148,6 +156,7 @@ class _LaoOCRScanState extends State<LaoOCRScan> {
             builder: (context) => MaskOCRCam(
                   ocrType: _ocrType,
                   ocrSubType: _ocrSubType,
+                  showPopBack: widget.showPopBack,
                   onCapture: (val, img) {
                     final Map data = {
                       'kycType': _ocrType == 'idCard' ? _ocrSubType : _ocrType,

@@ -26,9 +26,13 @@ class LivenessFace extends StatefulWidget {
 }
 
 class _LivenessFaceState extends State<LivenessFace> {
+  // static const String asstImg = 'assets/images/portrait.png';
+  static const String asstImg =
+      'https://github.com/Tonhbcl28/laoocr/blob/3e415a3cec15a97595fa3957280f72a3e2a409d7/assets/images/portrait.png?raw=true';
   var image1 = new Regula.MatchFacesImage();
   var image2 = new Regula.MatchFacesImage();
-  var img1 = Image.asset('assets/images/portrait.png');
+  // var img1 = Image.asset(asstImg);
+  var img1 = Image.network(asstImg);
   var img2;
   String _similarity = "0";
   String _liveness = "0";
@@ -73,7 +77,8 @@ class _LivenessFaceState extends State<LivenessFace> {
 
   clearResults() {
     setState(() {
-      img1 = Image.asset('assets/images/portrait.png');
+      // img1 = Image.asset(asstImg);
+      img1 = Image.network(asstImg);
       img2 = Image.memory(widget.idCardProfileImg);
       _similarity = "0";
       _liveness = "0";

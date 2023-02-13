@@ -1,7 +1,10 @@
 name: laoocr
-description: A new Flutter package project.
+description: The First Lao OCR and Face Liveliness.
 version: 0.0.1
-homepage:
+authors:
+  - Tonh Bcl
+  - phoutthakonebcl@gmail.com
+homepage: https://github.com/Tonhbcl28/laoocr.git
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
