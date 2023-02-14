@@ -105,20 +105,20 @@ class _LaoOCRScanState extends State<LaoOCRScan> {
             const Divider(),
             _rdoStartindex != null && _rdoStartindex == 0
                 ? Column(children: [
-                  for (int i = 0; i < _rdoOcrSubType.length; i++)
-                    RadioListTile(
-                        title: Text(_rdoOcrSubType[i]['name'].toString()),
-                        value: i,
-                        groupValue: _rdoSubStartindex,
-                        onChanged: (int? value) {
-                          setState(() {
-                            _rdoSubStartindex = value;
-                            _onSelectSubRdo =
-                                _rdoOcrSubType[i]['id'].toString();
-                          });
-                          // print(_onSelectSubRdo);
-                        }),
-                ])
+                    for (int i = 0; i < _rdoOcrSubType.length; i++)
+                      RadioListTile(
+                          title: Text(_rdoOcrSubType[i]['name'].toString()),
+                          value: i,
+                          groupValue: _rdoSubStartindex,
+                          onChanged: (int? value) {
+                            setState(() {
+                              _rdoSubStartindex = value;
+                              _onSelectSubRdo =
+                                  _rdoOcrSubType[i]['id'].toString();
+                            });
+                            // print(_onSelectSubRdo);
+                          }),
+                  ])
                 : Container(),
             Container(
               padding: const EdgeInsets.only(left: 32, right: 32),

@@ -252,8 +252,8 @@ Future<MaskForCameraViewResult> _cropHalfImage(
       y = image.height - 125;
       // x = 190;
       x = image.width - 135;
-      print('y = $y');
-      print('x = $x');
+      // print('y = $y');
+      // print('x = $x');
       // w = image.width - 5;
       w = 150;
       // print('z = $w');

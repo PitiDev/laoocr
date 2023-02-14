@@ -20,7 +20,6 @@ Package can extract the data from document as the following:
 - Expired Date, etc.
 - Can match image from kyc document and liveliness cam to compare that is right person or not.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
 Install the package and call the widget directly you will receive the result.
