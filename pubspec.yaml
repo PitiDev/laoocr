@@ -1,9 +1,6 @@
 name: laoocr
 description: The First Lao OCR and Face Liveliness.
 version: 0.0.1
-authors:
-  - Tonh Bcl
-  - phoutthakonebcl@gmail.com
 homepage: https://github.com/Tonhbcl28/laoocr.git
 
 environment:
