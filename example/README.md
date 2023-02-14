@@ -10,7 +10,7 @@ And you also take liveliness and match image from kyc document to compare that i
 - you can contact me at *phoutthakonebcl@gmail.com
 
 ## Preview
-![](../assets/images/laoocr.gif)
+![](https://github.com/Tonhbcl28/laoocr/blob/main/assets/images/laoocr.gif?raw=true)
 
 ## Features
 Package can extract the data from document as the following:
@@ -19,7 +19,6 @@ Package can extract the data from document as the following:
 - Issued Date.
 - Expired Date, etc.
 - Can match image from kyc document and liveliness cam to compare that is right person or not.
-
 
 ## Getting started
 Install the package and call the widget directly you will receive the result.

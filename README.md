@@ -10,7 +10,7 @@ And you also take liveliness and match image from kyc document to compare that i
 - you can contact me at *phoutthakonebcl@gmail.com
 
 ## Preview
-![](assets/images/laoocr.gif)
+![](https://github.com/Tonhbcl28/laoocr/blob/main/assets/images/laoocr.gif?raw=true)
 
 ## Features
 Package can extract the data from document as the following:
