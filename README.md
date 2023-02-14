@@ -44,7 +44,7 @@ You must add camera permission to the info.plist file.
 
 ## Usage
 You can call the widget and get the response after the KYC Scan.
-Example Code: `/example` folder.
+Please find the example Code:
 ```
 LaoOCRScan(
       onCapture: (res) {
@@ -76,4 +76,4 @@ This Package can help Lao developer to work with KYC document and it's very easy
 It can save the company cost too much.
 - This this the first version which can work with Lao ID and passport only, If you want me to develop more for Lao family book please support me! and let me know.
 - you can contact me at *phoutthakonebcl@gmail.com
-  Thank you so much 😘 (❁´◡`❁) ![img.png](assets/images/img.png).
+  Thank you so much 😘 (❁´◡`❁).
