@@ -32,7 +32,7 @@ class MaskOCRCam extends StatefulWidget {
       : super(key: key);
 
   final String ocrType;
-  final String? ocrSubType;
+  String? ocrSubType;
   final Function onCapture;
   final bool? doFaceReg;
   final Function? onFaceReg;
@@ -51,9 +51,7 @@ class _MaskOCRCamState extends State<MaskOCRCam> {
   @override
   Widget build(BuildContext context) {
     return widget.ocrType == 'idCard'
-        ? widget.ocrSubType == 'greenIdCard'
-            ? _buildShowResultList(widget.ocrSubType!)
-            : _buildShowResultList(widget.ocrSubType!)
+        ? _buildShowResultList(widget.ocrSubType ?? "")
         : widget.ocrType == 'passport'
             ? _buildShowResultList(widget.ocrType)
             : Scaffold(
@@ -157,7 +155,7 @@ class _MaskOCRCamState extends State<MaskOCRCam> {
                                 Row(
                                   children: [
                                     res.sixPartImage != null
-                                        ? Container(
+                                        ? SizedBox(
                                             height: 100,
                                             width: 80,
                                             child: MyImageView(
@@ -440,7 +438,7 @@ class _MaskOCRCamState extends State<MaskOCRCam> {
 
       widget.onCapture(tempData, kycImg);
 
-      return Container(
+      return SizedBox(
         height: MediaQuery.of(context).size.height / 2,
         child: ListView.builder(
           itemCount: _ListDataValue().length,
