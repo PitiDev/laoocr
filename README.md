@@ -1,39 +1,79 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Lao OCR Scan (Lao KYC Scanner)
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+<a href="https://www.buymeacoffee.com/phoutthako7" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+The First Lao OCR and Face Liveliness. Which you can scan Lao ID card(White ID card and Green ID Card), Passport.
+The package can extract necessary data.
+And you also take liveliness and match image from kyc document to compare that is the right person using the document or not.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+- This this the first version which can work with Lao ID and passport only, If you want me to develop more for Lao family book please support me! and let me know.
+- you can contact me at *phoutthakonebcl@gmail.com
+
+## Preview
+
 
 ## Features
+Package can extract the data from document as the following:
+- Document Number.
+- Date of birth.
+- Issued Date.
+- Expired Date, etc.
+- Can match image from kyc document and liveliness cam to compare that is right person or not.
 
 TODO: List what your package can do. Maybe include images, gifs, or videos.
 
 ## Getting started
+Install the package and call the widget directly you will receive the result.
+### install with flutter
+```
+flutter pub add laoocr
+flutter pub get
+```
+### Then You have to import the package to your project
+```
+import 'package:laoocr/laoocr.dart';
+```
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## General Setup
+- Requirement SDK minimum version 2.18 up.
+### Android
+Nothing to config
+
+### IOS
+You must add camera permission to the info.plist file.
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+You can call the widget and get the response after the KYC Scan.
+Example Code: `/example` folder.
+```
+LaoOCRScan(
+      onCapture: (res) {
+        print('OCR result = $res'); //List
+        print('OCR img = ${res['kycImg']}'); //Uint8List
+      },
+      showPopBack: true,
+      doFaceReg: true,
+      onFaceReg: (data) {
+        //liveliness status is Passed means real people, Fail means fake person
+        print('liveliness data = $data'); //image as base 64
+      },
+      showRetakeBtn: true,
+      showSubmitBtn: true,
+      showFaceSubmitBtn: true,
+      txtSubmit: 'Submit',
+      btnSubmit: () {
+        print('submitt');
+      },
+      txtSubmitOnFace: 'Done',
+      btnSubmitOnFace: () {
+        print('face liveliness submit');
+      },
+    )
 ```
 
 ## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This Package can help Lao developer to work with KYC document and it's very easy to use with the high performance.
+It can save the company cost too much.
+- This this the first version which can work with Lao ID and passport only, If you want me to develop more for Lao family book please support me! and let me know.
+- you can contact me at *phoutthakonebcl@gmail.com
+  Thank you so much 😘 (❁´◡`❁) ![img.png](assets/images/img.png).
