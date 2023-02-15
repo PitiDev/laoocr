@@ -11,7 +11,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Lao OCR Demo',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
@@ -27,7 +26,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LaoOCRScan(
       onCapture: (res) {
-        print('OCR result = $res'); //List
+        print('OCR result = $res');
         print('OCR img = ${res['kycImg']}'); //Uint8List
       },
       showPopBack: true,

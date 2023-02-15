@@ -35,7 +35,15 @@ import 'package:laoocr/laoocr.dart';
 ## General Setup
 - Requirement SDK minimum version 2.18 up.
 ### Android
-Nothing to config
+Android folder at app/build.gradle, you have to config as following:
+
+```
+ android {
+   defaultConfig {
+     minSdkVersion 21
+   }
+ }  
+```
 
 ### IOS
 You must add camera permission to the info.plist file.
@@ -46,7 +54,7 @@ Please find the example Code:
 ```
 LaoOCRScan(
       onCapture: (res) {
-        print('OCR result = $res'); //List
+        print('OCR result = $res');
         print('OCR img = ${res['kycImg']}'); //Uint8List
       },
       showPopBack: true,
