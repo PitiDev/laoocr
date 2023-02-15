@@ -1,6 +1,6 @@
 name: laoocr
-description: The First Lao OCR and Face Liveliness.
-version: 0.0.2
+description: Lao OCR Scanner (Lao ID Card, Passport, etc...) and Face Liveliness.
+version: 0.0.3
 homepage: https://github.com/Tonhbcl28/laoocr.git
 
 environment:
